@@ -39,8 +39,7 @@ function showSkeletonLoadingState(numberOfSkeletons) {
 }
 
 async function fetchMovies(query) {
-  const apiKey = '9c4b24fc';
-  const url = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`;  
+  const url = `http://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=9c4b24fc`;  
   setTimeout(async () => {
     try {
       const response = await fetch(url);
@@ -52,6 +51,7 @@ async function fetchMovies(query) {
     }
   }, 500); 
 }
+
 function displayMovies(movies) {
 
   moviesGrid.innerHTML = '';
