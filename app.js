@@ -39,7 +39,8 @@ function showSkeletonLoadingState(numberOfSkeletons) {
 }
 
 async function fetchMovies(query) {
-  const url = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=9c4b24fc`;  
+  const apiKey = '9c4b24fc';
+  const url = `https://omdbapi.com/?apikey=9c4b24fc&s=${encodeURIComponent(query)}`;
   setTimeout(async () => {
     try {
       const response = await fetch(url);
